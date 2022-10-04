@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    --drct : to top;
+    --Scissors-Gradient: linear-gradient(var(--drct), hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+    --Paper-Gradient: linear-gradient(var(--drct), hsl(230, 89%, 62%),hsl(230, 89%, 65%));
+    --Rock-Gradient: linear-gradient(var(--drct), hsl(349, 71%, 52%),hsl(349, 70%, 56%));
+    --Dark-Text: hsl(229, 25%, 31%);
+    --Score-Text: hsl(229, 64%, 46%);
+    --Header-Outline: hsl(217, 16%, 45%);
+    --Radial-Gradient: radial-gradient(at center top,hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    font-family: 'Barlow Semi Condensed';
+    background: var(--Radial-Gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.App {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.abso {
+    position: absolute;
+    top: 0;
+}
+
+.rules-sheet-wrapper {
+    display: flex;
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.3);
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.show-rules {
+    display: flex !important;
+}

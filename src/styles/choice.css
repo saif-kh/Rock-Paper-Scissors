@@ -1,0 +1,100 @@
+.choice-wrapper {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.2s ease;
+    padding: 22px;
+    border-radius: 50%;
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.5) inset,0 6px 6px rgb(0 0 0 / 0.3);
+}
+
+.choice-wrapper:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.choice {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    aspect-ratio: 1/1;
+    padding: 35px;
+    border-radius: 50%;
+    box-shadow: 0 7px 0 rgb(0 0 0 / 0.2) inset;
+}
+
+.choice img {
+    width: 80%;
+}
+
+.bigger {
+    padding: 30px;
+}
+
+.bigger:hover {
+    transform: none;
+    cursor: auto;
+}
+
+.big {
+    width: 210px;
+}
+
+.rock {
+    background: var(--Rock-Gradient);
+}
+.paper {
+    background: var(--Paper-Gradient);
+}
+.scissors {
+    background: var(--Scissors-Gradient);
+}
+
+.effect {
+    animation-name: shade;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    --sd : 255, 255, 255;
+}
+
+@keyframes shade {
+    0% {box-shadow: 0 0 0 50px rgb(var(--sd),.7);}
+    50% {box-shadow:  0 0 0 50px rgb(var(--sd), 0.3);}
+    100% {box-shadow: 0 0 0 200px rgb(var(--sd), 0.1);}
+}
+
+@media (max-width : 870px) {
+    .big {
+    width: 170px;
+    }
+}
+
+@media (max-width : 650px) {
+    .choice-wrapper {
+        padding: 20px;
+    }
+
+    .choice {
+        width: 130px;
+        padding: 25px;
+    }
+
+    .big {
+        width: 150px;
+    }
+}
+
+@media (max-width : 450px) {
+    .choice-wrapper {
+        padding: 15px;
+    }
+
+    .choice {
+        width: 100px;
+        padding: 25px;
+
+    }
+}

@@ -1,0 +1,35 @@
+.main {
+    position: relative;
+    height: 75vh;
+    display: flex;
+}
+
+.hide-main {
+    display: none;
+}
+
+.mid-sec {
+    padding-top: 2rem;
+    margin-inline: auto;
+}
+
+.mid-sec * {
+    margin-inline: auto;
+}
+
+.button-sec {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 2rem;
+}
+
+@media (max-width : 650px) {
+    .button-sec {
+        width: 100%;
+        margin: 0;
+    }
+    .button-sec * {
+        margin-inline: auto;
+    }
+}

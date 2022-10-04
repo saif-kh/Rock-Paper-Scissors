@@ -1,0 +1,36 @@
+.choice-section {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.5rem;
+    position: relative;
+}
+
+.tri-bg {
+    display: flex;
+    position: absolute;
+    top: 22%;
+    z-index: -1;
+}
+
+@media (max-width : 650px) {
+    .choice-section {
+        max-width: 550px;
+    }
+}
+
+
+@media (max-width : 450px) {
+    .tri-bg {
+        width: 270px;
+        top: 17%;
+    }
+    .tri-bg img {
+        width: 100%;
+    }
+    .choice-section {
+        padding: 0.5rem;
+    }
+}
