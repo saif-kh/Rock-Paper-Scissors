@@ -37,7 +37,7 @@ function Result() {
         <div className='side side-left'>
             <div className='who-pick upper'>You picked</div>
             <div className='chosen-coin'>
-                <Chosen pick={choice}/>
+                <Chosen pick={choice} effect={res === "win" ? "true" : ""}/>
                 {/* <div className='shadow'></div> */}
             </div>
         </div>
@@ -49,7 +49,7 @@ function Result() {
         </div>
         <div className='side side-right'>
             <div className='who-pick upper'>The house picked</div>
-            <div className='chosen-coin'><Chosen pick={rand}/></div>
+            <div className='chosen-coin'><Chosen pick={rand} effect={res === "loss" ? "true" : ""}/></div>
         </div>
     </div>
   )

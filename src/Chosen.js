@@ -6,7 +6,8 @@ function Chosen(props) {
     <div className={classNames('choice-wrapper bigger', {
         "rock" : props.pick === "rock",
         "paper" : props.pick === "paper",
-        "scissors" : props.pick === "scissors"
+        "scissors" : props.pick === "scissors",
+        "effect" : props.effect === "true"
     })}>
         <div className='choice big'>
             <img src={`../images/icon-${props.pick}.svg`} alt={`${props.pick}`}/>

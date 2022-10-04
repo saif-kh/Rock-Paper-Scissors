@@ -40,7 +40,6 @@ function App() {
           } 
         }
       }
-      console.log(ref.current)
     },[ref.current,rules])
   return (
     <div className="App">

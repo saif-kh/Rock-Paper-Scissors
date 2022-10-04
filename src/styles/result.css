@@ -132,6 +132,9 @@
     .side-right {
         transform: translateX(30px);
     }
+    .effect {
+        --spread : 30px;
+    }
 }
 
 @media (max-width : 650px) {
@@ -160,5 +163,8 @@
 @media (max-width : 450px) {
     .result-section {
         top : 150%;
+    }
+    .effect {
+        --spread : 15px;
     }
 }
