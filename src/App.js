@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, { useEffect, useState } from 'react'
 import { RpsContext } from './Contexts/RpsContext';
 import Header from './Header';
@@ -36,18 +35,13 @@ function App() {
     useEffect(()=> {
       if(ref.current) {
         onclick = (e) => {
-          // // if( rules) {
-          // //   // setRules(false)
-          console.log("hii")
-          //   console.log(rules)
-          console.log(ref.current)
-          // // } 
-          // console.log(ref.current)
-          // console.log("yoo")
+          if( !ref.current?.contains(e.target) && rules) {
+            setRules(false)
+          } 
         }
       }
-    },[ref.current])
-    console.log(ref.current)
+      console.log(ref.current)
+    },[ref.current,rules])
   return (
     <div className="App">
       <RpsContext.Provider value={{score,setScore,choice, setChoice,rand, setRand,showR, setShowR}}>

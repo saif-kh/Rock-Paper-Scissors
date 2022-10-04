@@ -9,6 +9,10 @@ import "./styles/main.css"
 function Main(props) {
   const {showR} = useContext(RpsContext)
 
+  function bssala() {
+    setTimeout(props.setRules,10)
+  }
+
   return (
     <div className='main'>
         <div className='mid-sec'>
@@ -20,7 +24,7 @@ function Main(props) {
             })}><Result/></div> 
         </div>
         <div className='button-sec'>
-            <Rules setRules={props.setRules}/>
+            <Rules setRules={bssala}/>
         </div>
     </div>
   )

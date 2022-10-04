@@ -1,11 +1,9 @@
 .rules-sheet {
-    /* position: absolute; */
     margin: auto;
     background-color: white;
     border-radius: 10px;
     width: 100%;
     max-width: 370px;
-    height: fit-content;
     padding: 1.5rem 2rem;
 }
 
