@@ -1,113 +1,127 @@
 .choice-wrapper {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    transition: all 0.2s ease;
-    padding: 22px;
-    border-radius: 50%;
-    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.5) inset,0 6px 6px rgb(0 0 0 / 0.3);
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  transition: all 0.2s ease;
+  padding: 18px;
+  border-radius: 50%;
+  box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.5) inset, 0 6px 6px rgb(0 0 0 / 0.3);
 }
 
 .choice-wrapper:hover {
-    transform: scale(1.03);
-    cursor: pointer;
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 .choice {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    aspect-ratio: 1/1;
-    padding: 35px;
-    border-radius: 50%;
-    box-shadow: 0 7px 0 rgb(0 0 0 / 0.2) inset;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  aspect-ratio: 1/1;
+  padding: 25px;
+  border-radius: 50%;
+  box-shadow: 0 7px 0 rgb(0 0 0 / 0.2) inset;
 }
 
 .choice img {
-    width: 80%;
+  width: 80%;
 }
 
 .bigger {
-    padding: 30px;
+  padding: 20px;
 }
 
 .bigger:hover {
-    transform: none;
-    cursor: auto;
+  transform: none;
+  cursor: auto;
 }
 
 .big {
-    width: 210px;
+  width: 130px;
 }
 
 .rock {
-    background: var(--Rock-Gradient);
+  background: var(--Rock-Gradient);
 }
 .paper {
-    background: var(--Paper-Gradient);
+  background: var(--Paper-Gradient);
 }
 .scissors {
-    background: var(--Scissors-Gradient);
+  background: var(--Scissors-Gradient);
 }
 
 .effect {
-    animation-name: shade;
-    animation-duration: 1.6s;
-    animation-delay: 0.3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    --sd : 255, 255, 255;
-    --spread : 70px;
+  animation-name: shade;
+  animation-duration: 1.6s;
+  animation-delay: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  --sd: 255, 255, 255;
+  --spread: 70px;
 }
 
 @keyframes shade {
-    0% {box-shadow: 0 0 0 0px rgb(var(--sd),.7);}
-    30% {box-shadow:  0 0 0 var(--spread) rgb(var(--sd), .1);}
-    60% {box-shadow: 0 0 0 var(--spread) rgb(var(--sd), .1), 0 0 0 calc(var(--spread) * 2) rgb(var(--sd), .1);}
-    90% {box-shadow: 0 0 0 var(--spread) rgb(var(--sd), .1), 0 0 0 calc(var(--spread) * 2) rgb(var(--sd), .1), 0 0 0 calc(var(--spread) * 3) rgb(var(--sd), 0.1);}
-    100% {box-shadow: 0 0 0 var(--spread) rgb(var(--sd), .1), 0 0 0 calc(var(--spread) * 2) rgb(var(--sd), .1), 0 0 0 calc(var(--spread) * 3) rgb(var(--sd), 0.1);}
-    /* 70% {box-shadow: 0 0 0 var(--spread) rgb(var(--sd), .3), 0 0 0 calc(var(--spread) * 2) rgb(var(--sd), .2);}
+  0% {
+    box-shadow: 0 0 0 0px rgb(var(--sd), 0.7);
+  }
+  30% {
+    box-shadow: 0 0 0 var(--spread) rgb(var(--sd), 0.1);
+  }
+  60% {
+    box-shadow: 0 0 0 var(--spread) rgb(var(--sd), 0.1),
+      0 0 0 calc(var(--spread) * 2) rgb(var(--sd), 0.1);
+  }
+  90% {
+    box-shadow: 0 0 0 var(--spread) rgb(var(--sd), 0.1),
+      0 0 0 calc(var(--spread) * 2) rgb(var(--sd), 0.1),
+      0 0 0 calc(var(--spread) * 3) rgb(var(--sd), 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 var(--spread) rgb(var(--sd), 0.1),
+      0 0 0 calc(var(--spread) * 2) rgb(var(--sd), 0.1),
+      0 0 0 calc(var(--spread) * 3) rgb(var(--sd), 0.1);
+  }
+  /* 70% {box-shadow: 0 0 0 var(--spread) rgb(var(--sd), .3), 0 0 0 calc(var(--spread) * 2) rgb(var(--sd), .2);}
     90% {box-shadow:  0 0 0 var(--spread) rgb(var(--sd), .3);}
     100% {box-shadow: 0 0 0 0px rgb(var(--sd),.7);} */
-
 }
 
-@media (max-width : 870px) {
-    .big {
-    width: 170px;
-    }
+@media (max-width: 870px) {
+  .big {
+    width: 100px;
+  }
 }
 
-@media (max-width : 650px) {
-    .choice-wrapper {
-        padding: 20px;
-    }
+@media (max-width: 650px) {
+  .choice-wrapper {
+    padding: 20px;
+  }
 
-    .choice {
-        width: 130px;
-        padding: 25px;
-    }
+  .choice {
+    width: 90px;
+    padding: 20px;
+  }
 
-    .big {
-        width: 150px;
-    }
+  .big {
+    width: 150px;
+  }
 }
 
-@media (max-width : 450px) {
-    .choice-wrapper {
-        padding: 15px;
-    }
+@media (max-width: 450px) {
+  .choice-wrapper {
+    padding: 15px;
+  }
 
-    .choice {
-        width: 100px;
-        padding: 25px;
-    }
+  .choice {
+    width: 100px;
+    padding: 25px;
+  }
 }
 
-@media (max-width : 335px) {
-    .choice {
-        width: 90px;
-    }
+@media (max-width: 335px) {
+  .choice {
+    width: 90px;
+  }
 }

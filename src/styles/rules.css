@@ -1,19 +1,21 @@
-.rules-sheet svg{
-    letter-spacing: 1px;
+.rules-sheet svg {
+  letter-spacing: 1px;
 }
 
 .rules-button {
-    color: white;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    border: 1px solid white;
-    border-radius: 10px;
-    width: fit-content;
-    height: fit-content;
-    padding: 0.5rem 2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 2rem;
 }
 
 .rules-button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
